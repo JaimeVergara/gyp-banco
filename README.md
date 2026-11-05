@@ -15,7 +15,7 @@ tarjeta del alumno con su saldo y puedes **dar** o **cobrar** GYP Dollars en dos
 2. **SQL Editor** → pegar `supabase/esquema.sql` → Run. (Opcional: `supabase/datos-prueba.sql`.)
 3. **Authentication → Users → Add user**: crear las cuentas de los profesores.
 4. **Authentication → Sign In / Providers**: desactivar "Allow new users to sign up".
-5. `src/app/config.ts` ya apunta al proyecto de pruebas; cámbialo si usas otro.
+5. `src/app/config.ts` ya apunta al proyecto gyp-banco.
 
 ## 2. Probar en el computador
 ```bash

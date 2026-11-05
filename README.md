@@ -11,7 +11,7 @@ tarjeta del alumno con su saldo y puedes **dar** o **cobrar** GYP Dollars en dos
 - **Modo demo**: botón en el login para probar con alumnos inventados guardados solo en el navegador.
 
 ## 1. Supabase (base de datos)
-1. Usar el proyecto de pruebas de Supabase (puede ser el mismo de `nfc-verifica`, las tablas no chocan).
+1. Proyecto Supabase: **gyp-banco**.
 2. **SQL Editor** → pegar `supabase/esquema.sql` → Run. (Opcional: `supabase/datos-prueba.sql`.)
 3. **Authentication → Users → Add user**: crear las cuentas de los profesores.
 4. **Authentication → Sign In / Providers**: desactivar "Allow new users to sign up".

@@ -1,5 +1,5 @@
 -- Banco GYP · Ejecutar una vez en Supabase: SQL Editor → New query → pegar → Run.
--- Puede convivir con las tablas de nfc-verifica en el mismo proyecto (nombres distintos).
+-- Pensado para el proyecto Supabase "gyp-banco" (también puede convivir con nfc-verifica).
 
 create table alumnos (
   id uuid primary key default gen_random_uuid(),
@@ -23,6 +23,11 @@ create table movimientos (
 );
 create index movimientos_alumno_fecha on movimientos (alumno_id, fecha desc);
 create index movimientos_fecha on movimientos (fecha desc);
+
+-- Permisos de la API (explícitos: algunos proyectos nuevos no los dan por defecto).
+grant usage on schema public to authenticated;
+grant select, insert on alumnos to authenticated;
+grant select on movimientos to authenticated;
 
 -- Seguridad: sin sesión iniciada no se puede leer ni escribir nada.
 alter table alumnos enable row level security;
